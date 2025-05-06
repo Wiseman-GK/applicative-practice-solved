@@ -11,7 +11,14 @@
 
 export function find(array, callback) {
   // Your code goes here...
-  
+  let newObj = undefined;
+  for (let element of array) {
+    if (callback(element)) {
+      newObj = new Object(element);
+      break
+    }
+  }
+  return newObj;
 }
 
 
